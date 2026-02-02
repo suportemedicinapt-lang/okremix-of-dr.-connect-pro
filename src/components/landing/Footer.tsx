@@ -1,7 +1,6 @@
-import { Instagram, Linkedin, Facebook } from "lucide-react";
+import { Instagram, Linkedin, Facebook, Eye } from "lucide-react";
 
 interface FooterProps {
-  // TODO: Conectar com Med.ID
   nome: string;
   crm: string;
   uf: string;
@@ -23,36 +22,38 @@ export function Footer({
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-medical-heading py-12">
+    <footer className="bg-navy-dark py-16">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto text-center">
-          {/* Name and CRM */}
-          <h3 className="text-xl font-semibold text-primary-foreground mb-2">
-            {/* TODO: Nome dinâmico */}
-            {nome}
-          </h3>
-          <p className="text-primary-foreground/70 mb-1">
-            {/* TODO: Especialidade dinâmica */}
+          {/* Logo */}
+          <div className="flex items-center justify-center gap-3 mb-6">
+            <div className="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center">
+              <Eye className="w-5 h-5 text-white" />
+            </div>
+            <h3 className="text-xl font-semibold text-white">
+              {nome}
+            </h3>
+          </div>
+          
+          <p className="text-white/70 mb-1">
             {especialidade}
           </p>
-          <p className="text-primary-foreground/50 text-sm mb-6">
-            {/* TODO: CRM dinâmico */}
+          <p className="text-white/50 text-sm mb-8">
             CRM/{uf} {crm}
           </p>
 
           {/* Social Links */}
           {(redesSociais.instagram || redesSociais.linkedin || redesSociais.facebook) && (
-            <div className="flex justify-center gap-4 mb-8">
-              {/* TODO: Links dinâmicos das redes sociais */}
+            <div className="flex justify-center gap-4 mb-10">
               {redesSociais.instagram && (
                 <a
                   href={redesSociais.instagram}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-10 h-10 bg-primary-foreground/10 rounded-full flex items-center justify-center hover:bg-primary-foreground/20 transition-colors"
+                  className="w-12 h-12 bg-white/5 rounded-xl flex items-center justify-center hover:bg-white/10 transition-colors border border-white/10"
                   aria-label="Instagram"
                 >
-                  <Instagram className="w-5 h-5 text-primary-foreground/80" />
+                  <Instagram className="w-5 h-5 text-white/80" />
                 </a>
               )}
               {redesSociais.linkedin && (
@@ -60,10 +61,10 @@ export function Footer({
                   href={redesSociais.linkedin}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-10 h-10 bg-primary-foreground/10 rounded-full flex items-center justify-center hover:bg-primary-foreground/20 transition-colors"
+                  className="w-12 h-12 bg-white/5 rounded-xl flex items-center justify-center hover:bg-white/10 transition-colors border border-white/10"
                   aria-label="LinkedIn"
                 >
-                  <Linkedin className="w-5 h-5 text-primary-foreground/80" />
+                  <Linkedin className="w-5 h-5 text-white/80" />
                 </a>
               )}
               {redesSociais.facebook && (
@@ -71,23 +72,23 @@ export function Footer({
                   href={redesSociais.facebook}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-10 h-10 bg-primary-foreground/10 rounded-full flex items-center justify-center hover:bg-primary-foreground/20 transition-colors"
+                  className="w-12 h-12 bg-white/5 rounded-xl flex items-center justify-center hover:bg-white/10 transition-colors border border-white/10"
                   aria-label="Facebook"
                 >
-                  <Facebook className="w-5 h-5 text-primary-foreground/80" />
+                  <Facebook className="w-5 h-5 text-white/80" />
                 </a>
               )}
             </div>
           )}
 
           {/* Divider */}
-          <div className="border-t border-primary-foreground/10 pt-6">
+          <div className="border-t border-white/10 pt-8">
             {/* Legal Notice - CFM Compliant */}
-            <p className="text-primary-foreground/40 text-xs leading-relaxed max-w-2xl mx-auto mb-4">
+            <p className="text-white/40 text-xs leading-relaxed max-w-2xl mx-auto mb-4">
               Este site tem caráter informativo e não substitui a consulta médica presencial. 
               As informações aqui contidas seguem as diretrizes do Conselho Federal de Medicina (CFM).
             </p>
-            <p className="text-primary-foreground/30 text-xs">
+            <p className="text-white/30 text-xs">
               © {currentYear} {nome}. Todos os direitos reservados.
             </p>
           </div>

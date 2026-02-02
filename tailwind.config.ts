@@ -47,14 +47,18 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
-        // Medical Theme Extended Colors
-        rose: {
-          light: "hsl(var(--rose-light))",
-          medium: "hsl(var(--rose-medium))",
-          dark: "hsl(var(--rose-dark))",
+        // Premium Ophthalmology Extended Colors
+        navy: {
+          light: "hsl(var(--navy-light))",
+          medium: "hsl(var(--navy-medium))",
+          dark: "hsl(var(--navy-dark))",
         },
+        gold: {
+          light: "hsl(var(--gold-light))",
+          medium: "hsl(var(--gold-medium))",
+        },
+        steel: "hsl(var(--steel-gray))",
         medical: {
-          warm: "hsl(var(--warm-white))",
           heading: "hsl(var(--text-heading))",
           body: "hsl(var(--text-body))",
         },
@@ -85,17 +89,28 @@ export default {
           from: { opacity: "0" },
           to: { opacity: "1" },
         },
+        "shimmer": {
+          "0%": { backgroundPosition: "-200% 0" },
+          "100%": { backgroundPosition: "200% 0" },
+        },
+        "float": {
+          "0%, 100%": { transform: "translateY(0)" },
+          "50%": { transform: "translateY(-10px)" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
         "fade-up": "fade-up 0.6s ease-out forwards",
         "fade-in": "fade-in 0.4s ease-out forwards",
+        "shimmer": "shimmer 2s linear infinite",
+        "float": "float 3s ease-in-out infinite",
       },
       backgroundImage: {
         "gradient-hero": "var(--gradient-hero)",
         "gradient-subtle": "var(--gradient-subtle)",
         "gradient-card": "var(--gradient-card)",
+        "gradient-gold": "var(--gradient-gold)",
       },
     },
   },

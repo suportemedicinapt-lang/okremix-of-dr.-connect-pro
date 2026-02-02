@@ -1,4 +1,4 @@
-// TODO: Conectar com Med.ID - Tipos para dados dinâmicos do médico
+// Tipos para dados dinâmicos do médico oftalmologista
 
 export interface MedicoData {
   nome: string;
@@ -32,22 +32,22 @@ export interface FAQItem {
   resposta: string;
 }
 
-// Dados placeholder para desenvolvimento/preview
+// Dados placeholder para Oftalmologia Premium
 export const dadosPlaceholder: MedicoData = {
-  nome: "Dra. Maria Silva",
-  crm: "123456",
+  nome: "Dr. Ricardo Mendes",
+  crm: "98765",
   uf: "SP",
-  especialidade: "Cardiologia",
-  anosExperiencia: 12,
-  cidadeBairro: "São Paulo, Jardins",
-  bioCurta: "Cuidado cardiológico com atenção individualizada e abordagem preventiva.",
+  especialidade: "Oftalmologia",
+  anosExperiencia: 18,
+  cidadeBairro: "São Paulo, Itaim Bibi",
+  bioCurta: "Especialista em cirurgia refrativa e catarata, com tecnologia de ponta e atendimento humanizado.",
   bioCompleta: [
-    "Com mais de 12 anos de experiência em Cardiologia, dedico minha prática ao cuidado individualizado de cada paciente, buscando compreender não apenas os sintomas, mas também o contexto de vida de cada pessoa.",
-    "Formada pela Universidade de São Paulo (USP), com residência em Cardiologia pelo Instituto do Coração (InCor). Mantenho atualização constante participando de congressos e cursos de especialização.",
-    "Minha abordagem combina conhecimento técnico com escuta ativa, criando um ambiente acolhedor onde você pode se sentir à vontade para tirar dúvidas e participar ativamente do seu cuidado."
+    "Com 18 anos de experiência em Oftalmologia, dedico minha prática à excelência no cuidado visual, combinando tecnologia avançada com atendimento personalizado para cada paciente.",
+    "Formado pela Universidade de São Paulo (USP), com Fellowship em Cirurgia Refrativa nos Estados Unidos. Certificado pela American Academy of Ophthalmology e membro da Sociedade Brasileira de Oftalmologia.",
+    "Minha missão é proporcionar a melhor visão possível para cada paciente, utilizando as técnicas mais modernas e equipamentos de última geração, sempre com transparência e cuidado em cada etapa do tratamento."
   ],
-  telefone: "(11) 99999-9999",
-  whatsapp: "5511999999999",
+  telefone: "(11) 3456-7890",
+  whatsapp: "5511934567890",
   foto: "",
   redesSociais: {
     instagram: "#",
@@ -55,46 +55,60 @@ export const dadosPlaceholder: MedicoData = {
   },
   areasAtuacao: [
     {
-      titulo: "Avaliação Cardiológica",
-      descricao: "Check-up completo do coração, incluindo histórico, exame físico e orientação sobre exames complementares quando necessário."
+      titulo: "Cirurgia Refrativa",
+      descricao: "LASIK, PRK e implante de lentes intraoculares para correção de miopia, hipermetropia e astigmatismo com tecnologia de última geração.",
+      icone: "eye"
     },
     {
-      titulo: "Acompanhamento de Hipertensão",
-      descricao: "Orientação e acompanhamento para controle da pressão arterial, com foco em mudanças de estilo de vida e tratamento adequado."
+      titulo: "Cirurgia de Catarata",
+      descricao: "Procedimento com lentes premium e tecnologia de femtossegundo, garantindo recuperação rápida e resultados precisos.",
+      icone: "scan"
     },
     {
-      titulo: "Prevenção Cardiovascular",
-      descricao: "Avaliação de fatores de risco e orientações personalizadas para manter a saúde do coração."
+      titulo: "Glaucoma",
+      descricao: "Diagnóstico precoce com exames especializados e tratamento personalizado para preservar sua visão a longo prazo.",
+      icone: "activity"
     },
     {
-      titulo: "Acompanhamento Pós-Procedimentos",
-      descricao: "Cuidado continuado após procedimentos cardíacos, com foco na recuperação e qualidade de vida."
+      titulo: "Doenças da Retina",
+      descricao: "Tratamento de degeneração macular, retinopatia diabética e outras condições com as terapias mais avançadas.",
+      icone: "layers"
+    },
+    {
+      titulo: "Exames Especializados",
+      descricao: "Topografia, tomografia de córnea, OCT e mapeamento de retina com equipamentos de alta precisão.",
+      icone: "microscope"
+    },
+    {
+      titulo: "Consultas de Rotina",
+      descricao: "Avaliação completa da saúde ocular, prescrição de óculos e lentes de contato, com foco na prevenção.",
+      icone: "clipboard"
     }
   ],
   faq: [
     {
+      pergunta: "A cirurgia refrativa é segura?",
+      resposta: "Sim, a cirurgia refrativa é um dos procedimentos mais seguros da medicina. Com mais de 30 anos de histórico e milhões de procedimentos realizados mundialmente, a taxa de satisfação supera 96%. Utilizamos tecnologia de última geração para garantir precisão e segurança."
+    },
+    {
+      pergunta: "Quanto tempo leva a recuperação da cirurgia de catarata?",
+      resposta: "A maioria dos pacientes percebe melhora significativa da visão já no dia seguinte à cirurgia. A recuperação completa ocorre em 2 a 4 semanas, com retorno às atividades normais em poucos dias. O procedimento é rápido, durando cerca de 15-20 minutos por olho."
+    },
+    {
+      pergunta: "Qual a idade ideal para correção visual a laser?",
+      resposta: "Geralmente recomendamos após os 21 anos, quando o grau já está estabilizado. Avaliamos caso a caso, considerando estabilidade do grau, espessura da córnea e saúde ocular geral. Não há limite máximo de idade, desde que os exames indiquem viabilidade."
+    },
+    {
+      pergunta: "O atendimento aceita convênio?",
+      resposta: "Trabalhamos com atendimento particular, garantindo tempo e atenção adequados para cada paciente. Fornecemos toda a documentação necessária para reembolso junto ao seu plano de saúde."
+    },
+    {
       pergunta: "Como é a primeira consulta?",
-      resposta: "A primeira consulta tem duração de aproximadamente 40-60 minutos. Nela, conversamos sobre seu histórico de saúde, sintomas, hábitos de vida e realizamos exame físico. Ao final, discutimos os próximos passos do seu cuidado."
+      resposta: "A consulta inicial dura aproximadamente 1 hora, incluindo exame completo de acuidade visual, mapeamento da córnea, medição da pressão ocular e avaliação do fundo de olho. Ao final, discutimos os resultados e as melhores opções de tratamento."
     },
     {
-      pergunta: "Preciso levar exames na primeira consulta?",
-      resposta: "Se você tiver exames anteriores (de qualquer tipo), traga-os. Isso ajuda a entender melhor seu histórico. Se não tiver, não se preocupe — podemos solicitar os exames necessários após a avaliação."
-    },
-    {
-      pergunta: "Qual o tempo de retorno para resultados?",
-      resposta: "O prazo varia conforme o tipo de exame. Após realizá-los, agendamos uma consulta de retorno para discutir os resultados e definir o plano de cuidado."
-    },
-    {
-      pergunta: "O atendimento é presencial ou online?",
-      resposta: "Ofereço consultas presenciais no consultório. Para alguns casos de acompanhamento, a teleconsulta pode ser uma opção, sempre respeitando as normas do CFM."
-    },
-    {
-      pergunta: "Como funciona o acompanhamento após a consulta?",
-      resposta: "Dependendo do seu caso, proponho um plano de acompanhamento com retornos periódicos. Você também terá canais de comunicação para dúvidas pontuais entre as consultas."
-    },
-    {
-      pergunta: "Atende convênio ou particular?",
-      resposta: "Atendo de forma particular. No momento da consulta, forneço recibo para reembolso junto ao seu plano de saúde, caso ele ofereça essa opção."
+      pergunta: "Quais formas de pagamento são aceitas?",
+      resposta: "Aceitamos todas as formas de pagamento: cartões de crédito (com parcelamento), débito, PIX e transferência. Para procedimentos cirúrgicos, oferecemos condições especiais de parcelamento."
     }
   ]
 };
