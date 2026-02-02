@@ -2,59 +2,62 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
+/* Premium Ophthalmology Design System - Navy Blue + Gray + Gold Accents
+   All colors in HSL format.
 */
 
 @layer base {
   :root {
-    /* Medical Red/Rose Theme - Professional & Trustworthy */
-    --background: 0 0% 100%;
-    --foreground: 350 10% 15%;
+    /* Navy Blue Premium Theme */
+    --background: 210 25% 98%;
+    --foreground: 220 30% 15%;
 
     --card: 0 0% 100%;
-    --card-foreground: 350 10% 15%;
+    --card-foreground: 220 30% 15%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 350 10% 15%;
+    --popover-foreground: 220 30% 15%;
 
-    /* Primary: Deep Medical Rose */
-    --primary: 350 65% 45%;
+    /* Primary: Deep Navy Blue */
+    --primary: 220 60% 25%;
     --primary-foreground: 0 0% 100%;
 
-    /* Secondary: Soft Blush */
-    --secondary: 350 30% 96%;
-    --secondary-foreground: 350 65% 35%;
+    /* Secondary: Light Gray Blue */
+    --secondary: 215 25% 95%;
+    --secondary-foreground: 220 40% 25%;
 
-    /* Muted: Warm Gray */
-    --muted: 350 10% 96%;
-    --muted-foreground: 350 10% 45%;
+    /* Muted: Sophisticated Gray */
+    --muted: 220 15% 95%;
+    --muted-foreground: 220 10% 45%;
 
-    /* Accent: Warm Rose */
-    --accent: 350 50% 92%;
-    --accent-foreground: 350 65% 35%;
+    /* Accent: Gold */
+    --accent: 42 80% 55%;
+    --accent-foreground: 220 60% 15%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 350 20% 90%;
-    --input: 350 20% 90%;
-    --ring: 350 65% 45%;
+    --border: 220 15% 88%;
+    --input: 220 15% 88%;
+    --ring: 220 60% 25%;
 
-    --radius: 0.75rem;
+    --radius: 0.5rem;
 
-    /* Custom Medical Theme Colors */
-    --rose-light: 350 60% 97%;
-    --rose-medium: 350 50% 85%;
-    --rose-dark: 350 70% 35%;
-    --warm-white: 30 20% 99%;
-    --text-heading: 350 15% 20%;
-    --text-body: 350 8% 35%;
+    /* Extended Ophthalmology Theme Colors */
+    --navy-light: 220 30% 97%;
+    --navy-medium: 220 40% 85%;
+    --navy-dark: 220 65% 18%;
+    --gold-light: 42 60% 92%;
+    --gold-medium: 42 70% 65%;
+    --steel-gray: 220 10% 50%;
+    --text-heading: 220 35% 12%;
+    --text-body: 220 15% 35%;
 
-    /* Gradients */
-    --gradient-hero: linear-gradient(135deg, hsl(350 65% 45%) 0%, hsl(340 60% 55%) 100%);
-    --gradient-subtle: linear-gradient(180deg, hsl(350 60% 97%) 0%, hsl(0 0% 100%) 100%);
-    --gradient-card: linear-gradient(145deg, hsl(0 0% 100%) 0%, hsl(350 30% 98%) 100%);
+    /* Premium Gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(220 65% 18%) 0%, hsl(220 50% 30%) 50%, hsl(220 60% 25%) 100%);
+    --gradient-subtle: linear-gradient(180deg, hsl(220 30% 97%) 0%, hsl(0 0% 100%) 100%);
+    --gradient-card: linear-gradient(145deg, hsl(0 0% 100%) 0%, hsl(220 20% 98%) 100%);
+    --gradient-gold: linear-gradient(135deg, hsl(42 80% 55%) 0%, hsl(38 85% 50%) 100%);
   }
 }
 
@@ -84,6 +87,24 @@ html {
   }
 }
 
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
 @layer base {
   * {
     @apply border-border;
@@ -92,4 +113,27 @@ html {
   body {
     @apply bg-background text-foreground;
   }
+}
+
+/* Premium typography enhancements */
+.text-gradient-gold {
+  background: linear-gradient(135deg, hsl(42 80% 55%) 0%, hsl(38 85% 45%) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Glass morphism effect */
+.glass-effect {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+/* Premium shadow */
+.shadow-premium {
+  box-shadow: 
+    0 4px 6px -1px rgba(0, 0, 0, 0.05),
+    0 10px 15px -3px rgba(0, 0, 0, 0.08),
+    0 20px 25px -5px rgba(0, 0, 0, 0.05);
 }
